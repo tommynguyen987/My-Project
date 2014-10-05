@@ -1,0 +1,23 @@
+﻿@model IEnumerable<thongtinbaihat.Models.SongsInfo>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Result</h2>
+<table>
+    <tr>
+        <td><b>Song name</b></td>
+        <td><b>Lyrics</b></td>
+        <td><b>Url</b></td>
+        <td><b>Upload user</b></td>
+    </tr>
+    @foreach(var item in Model){
+        <tr>
+            <td>@item.SongName</td>
+            @*<td>@Html.DropDownList("LyricsId", ViewBag.Lyrics as SelectList)</td>
+            <td>@Html.DropDownList("UrlId", ViewBag.Url as SelectList)</td>
+            <td>@Html.DropDownList("UserId", ViewBag.User as SelectList)</td>*@
+        </tr>
+    }
+</table>
